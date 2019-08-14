@@ -1,0 +1,52 @@
+/* form{
+    margin: 20px auto;
+    background-color: antiquewhite;
+} */
+
+#main-div{
+    width: 60%;
+    border: 2px solid red;
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: antiquewhite;
+    
+}
+#top-div, #bottom-div{
+    display: flex;
+    
+}
+fieldset{
+    border-color: antiquewhite;
+}
+input[type=text]{
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+#top-right, #top-left, #bottom-right, #bottom-left{
+    background-color: rgb(241, 168, 57); 
+    margin: 10px  10px 10px 10px; 
+    display: inline-block;
+}
+#bottom-left{
+  width: 500px;
+
+}
+#top-left{
+   width: 420px;
+}
+#top-right{
+    width: 310px;
+}
+
+#tright-fset{
+    height:100px;
+}
+#customerid, #price{
+    width:80px;
+}
+#state, #quantity{
+    width: 35px;
+}
+
+   
