@@ -1,118 +1,124 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="mailOrder.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="mailOrder.css" />
     <title>Mail-Order</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="main-div">
-        <form action="#">
-            <div id="top-div">
-                <div id="top-left">
-                    <fieldset id="tleft-fset">
-                        <legend>Customer Information</legend>
-                        <div>
-                            <label for="customerid">Customer ID:</label>
-                            <input type="text" id="customerid" value="">
-                        </div>
-                        <div>
-                            <label for="name">Name: </label>
-                            <input type="text" id="name" value="">
-                        </div>
-                        <span>
-                            <label for="state">State: </label>
-                            <input type="text" id="state" value="">
-                        </span>
-                        <span>
-                            <input type="checkbox" id="retail" value="">
-                            <label for="retail">Retail Customer</label>
-                        </span>
-                    </fieldset>
-                </div>
-                <div id="top-right">
-                    <fieldset id="tright-fset">
-                        <legend>Shipping</legend>
-                        <span>
-                            <input type="radio" id="ups" value="">
-                            <label for="ups">UPS</label>
-                        </span>
-                        <span>
-                            <input type="radio" id="fedex" value="">
-                            <label for="fedex">Fed EX Ground</label>
-                        </span><br>
-                        <span>
-                            <input type="radio" id="postal" value="">
-                            <label for="postal">US Postal Air</label>
-                        </span>
-                        <span>
-                            <input type="radio" id="fedexair" value="">
-                            <label for="fedexair">Fed EX Air</label>
-                        </span>
-                    </fieldset>
-                </div>
-            </div>
-            <div id="bottom-div">
+      <form action="#">
+        <div id="top-div">
+          <div id="top-left">
+            <fieldset id="tleft-fset">
+              <legend>Customer Information</legend>
+              <table id="table1">
+                <tr>
+                  <td><label for="customerid">Customer ID:</label></td>
+                  <td><input type="text" id="customerid" value="" /></td>
+                </tr>
+                <tr>
+                  <td><label for="name">Name: </label></td>
+                  <td><input type="text" id="name" value="" /></td>
+                </tr>
+                <tr>
+                  <td><label for="state">State: </label></td>
+                  <td>
+                    <input type="text" id="state" value="" />
+                    <input type="checkbox" id="retail" value=""/>
+                    <label for="retail">Retail Customer</label>
+                  </td>
+                </tr>
+              </table>
+            </fieldset>
+          </div>
+          <div id="top-right">
+            <fieldset id="tright-fset">
+              <legend>Shipping</legend>
+              <table id="table2">
+                <tr>
+                  <td>
+                    <input type="radio" id="ups" value="" />
+                    <label for="ups">UPS</label>
+                    <input type="radio" id="fedex" value="" />
+                    <label for="fedex">Fed Ex Ground</label>
+                  </td>
+                </tr>
+                <!-- <td></td> -->
+                <tr>
+                  <td>
+                    <input type="radio" id="postal" value="" />
+                    <label for="postal">US Postal Air</label>
+                    <input type="radio" id="fedexair" value="" />
+                    <label for="fedexair">Fed Ex Air</label>
+                  </td>
+                </tr>
+              </table>
+            </fieldset>
+          </div>
+        </div>
+        <div id="bottom-div">
+          <div id="bottom-left">
+            <fieldset id="bleft-fset">
+              <legend>Part Ordered</legend>
+              <table id="table3">
+                <tr>
+                  <td><label for="partn">Part Number:</label></td>
+                  <td><input type="text" id="partn" value="" /></td>
+                </tr>
+                <tr>
+                  <td><label for="descript">Description:</label></td>
+                  <td><input type="text" id="descript" value="" /></td>
+                </tr>
+                <tr>
+                    <td> <label for="price">Price per part:</label></td>
+                    <td><input type="text" id="price" value="" />
+                    <label for="quantity">Quantity:</label>
+                    <input type="text" id="quantity" value="" />
+                  </td>
+                </tr>
+                <tr>
+                <td></td>
+                  <td><input type="checkbox" id="oversize" value="" />
+                  <label for="oversize">Oversize Container?</label>
+                  </td>
+                </tr>
+              </table>
+            </fieldset>
+          </div>
+          <div id="bottom-right">
+            <fieldset id="bright-fset">
+              <legend>Output</legend>
+              <table id="table4">
+                <tr>
+                  <td><label for="cost">Cost:</label>
+                  <input type="text" id="cost" value="" /></td>
+                </tr>
+                <tr>
+                  <td><label for="tax">Sales Tax:</label>
+                  <input type="text" id="tax" value="" /></td>
+                </tr>
+                <tr>
+                  <td><label for="handling">Shipping and Handling:</label>
+                    <input type="text" id="handling" value="" /></td>
+                </tr>
+                <tr>
+                  <td><label for="total">Total:</label>
+                  <input type="text" id="total" value="" /></td>
+                </tr>
+              </table>
+            </fieldset>
+          </div>
+        </div>
 
-                <div id="bottom-left">
-                    <fieldset id="bleft-fset">
-                        <legend>Part Ordered</legend>
-                        <div>
-                            <label for="partn">Part Number:</label>
-                            <input type="text" id="partn" value="">
-                        </div>
-                        <div>
-                            <label for="descript">Description:</label>
-                            <input type="text" id="descript" value="">
-                        </div>
-                        <span>
-                            <label for="price">Price per part</label>
-                            <input type="text" id="price" value="">
-                        </span>
-                        <span>
-                            <label for="quantity">Quantity:</label>
-                            <input type="text" id="quantity" value="">
-                        </span>
-                        <div>
-                            <input type="checkbox" id="oversize" value="">
-                            <label for="oversize">Oversize Container?</label>
-                        </div>
-                    </fieldset>
-                </div>
-                <div id="bottom-right">
-                    <fieldset id="bright-fset">
-                        <legend>Output</legend>
-                        <div>
-                            <label for="cost">Cost:</label>
-                            <input type="text" id="cost" value="">
-                        </div>
-                        <div>
-                            <label for="tax">Sales Tax:</label>
-                            <input type="text" id="tax" value="">
-                        </div>
-                        <div>
-                            <label for="handling">Shipping and Handling:</label>
-                            <input type="text" id="handling" value="">
-                        </div>
-                        <div>
-                            <label for="total">Total:</label>
-                            <input type="text" id="total" value="">
-                        </div>
-                    </fieldset>
-                </div>
-            </div>
-
-            <div>
-                <button type="" id="compute">Compute</button>
-                <button type="" id="new-order">New Order</button>
-                <button type="" id="exit">Exit</button>
-            </div>
-
-        </form>
+        <div>
+          <button type="" id="compute">Compute</button>
+          <button type="" id="new-order">New Order</button>
+          <button type="" id="exit">Exit</button>
+        </div>
+      </form>
     </div>
-</body>
-
+  </body>
 </html>
