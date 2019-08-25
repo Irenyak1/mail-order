@@ -37,7 +37,7 @@ input[type=text]{
 
 #top-right, #top-left, #bottom-right, #bottom-left{
     background-color: rgb(241, 168, 57); 
-    margin: 10px  10px 10px 10px; 
+    margin: 10px  5px -4px 10px; 
     display: inline-block;
 }
 
@@ -83,6 +83,7 @@ button{
     border: 1px solid gray;
     border-radius: 3px;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 button#exit{
