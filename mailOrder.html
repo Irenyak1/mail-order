@@ -9,6 +9,7 @@
 
   <body>
     <div id="main-div">
+        <h1>MAIL ORDER FORM</h1>
       <form action="#">
         <div id="top-div">
           <div id="top-left">
@@ -17,17 +18,17 @@
               <table id="table1">
                 <tr>
                   <td><label for="customerid">Customer ID:</label></td>
-                  <td><input type="text" id="customerid" value="" /></td>
+                  <td><input type="text" id="customerid" value="" placeholder="123-45-6789"/></td>
                 </tr>
                 <tr>
                   <td><label for="name">Name: </label></td>
-                  <td><input type="text" id="name" value="" /></td>
+                  <td><input type="text" id="name" value="" placeholder="Tom Thumb"/></td>
                 </tr>
                 <tr>
                   <td><label for="state">State: </label></td>
                   <td>
-                    <input type="text" id="state" value="" />
-                    <input type="checkbox" id="retail" value=""/>
+                    <input type="text" id="state" value="" placeholder="CA"/>
+                    <input type="checkbox" id="retail" value="" checked/>
                     <label for="retail">Retail Customer</label>
                   </td>
                 </tr>
@@ -40,18 +41,17 @@
               <table id="table2">
                 <tr>
                   <td>
-                    <input type="radio" id="ups" value="" />
+                    <input type="radio" id="ups" name="myRadios" value="ups" checked/>
                     <label for="ups">UPS</label>
-                    <input type="radio" id="fedex" value="" />
+                    <input type="radio" id="fedex" name="myRadios" value="fedexg" />
                     <label for="fedex">Fed Ex Ground</label>
                   </td>
                 </tr>
-                <!-- <td></td> -->
                 <tr>
                   <td>
-                    <input type="radio" id="postal" value="" />
+                    <input type="radio" id="postal" name="myRadios" value="" />
                     <label for="postal">US Postal Air</label>
-                    <input type="radio" id="fedexair" value="" />
+                    <input type="radio" id="fedexair" name="myRadios" value="" />
                     <label for="fedexair">Fed Ex Air</label>
                   </td>
                 </tr>
@@ -66,17 +66,17 @@
               <table id="table3">
                 <tr>
                   <td><label for="partn">Part Number:</label></td>
-                  <td><input type="text" id="partn" value="" /></td>
+                  <td><input type="text" id="partn" value="" placeholder="10152"/></td>
                 </tr>
                 <tr>
                   <td><label for="descript">Description:</label></td>
-                  <td><input type="text" id="descript" value="" /></td>
+                  <td><input type="text" id="descript" value="" placeholder="Oil Filter"/></td>
                 </tr>
                 <tr>
                     <td> <label for="price">Price per part:</label></td>
-                    <td><input type="text" id="price" value="" />
+                    <td><input type="text" id="price" value=""  placeholder="$7.51"/>
                     <label for="quantity">Quantity:</label>
-                    <input type="text" id="quantity" value="" />
+                    <input type="text" id="quantity" value="" placeholder="2"/>
                   </td>
                 </tr>
                 <tr>
@@ -94,19 +94,19 @@
               <table id="table4">
                 <tr>
                   <td><label for="cost">Cost:</label>
-                  <input type="text" id="cost" value="" /></td>
+                  <input type="text" id="cost" value="" placeholder="$15.02"/></td>
                 </tr>
                 <tr>
                   <td><label for="tax">Sales Tax:</label>
-                  <input type="text" id="tax" value="" /></td>
+                  <input type="text" id="tax" value="" placeholder="1.50"/></td>
                 </tr>
                 <tr>
                   <td><label for="handling">Shipping and Handling:</label>
-                    <input type="text" id="handling" value="" /></td>
+                    <input type="text" id="handling" value="" placeholder="14.00" /></td>
                 </tr>
                 <tr>
                   <td><label for="total">Total:</label>
-                  <input type="text" id="total" value="" /></td>
+                  <input type="text" id="total" value="" placeholder="$30.52"/></td>
                 </tr>
               </table>
             </fieldset>

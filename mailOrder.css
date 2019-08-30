@@ -6,6 +6,10 @@
     background-color: rgb(250, 235, 215);
     font-size: 12px;   
 }
+#main-div h1{
+    text-align: center;
+}
+
 td{
     font-size: 12px;  
 }
@@ -76,6 +80,7 @@ label[for=quantity]{
 #name, #partn, #descript{
     width: 260px;
 }
+
 button{
     background-color: rgb(241, 168, 57); 
     width: 12%;
