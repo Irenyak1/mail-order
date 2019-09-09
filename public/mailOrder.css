@@ -1,0 +1,161 @@
+body{
+    display: flex;
+    
+}
+.caught-errors{      
+        font-size: 14px;
+        font-weight: 100%;
+        margin-top: 16.5%;
+        width:40% ; 
+        text-align: right;      
+}
+#iderror, #nameerror, #codeerror, #partnerror, #descripterror, #priceerror{
+    color: red;
+}
+
+#main-div{
+    width: 70%;
+    border: 2px solid rgb(250, 235, 215);
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: rgb(250, 235, 215);
+    font-size: 12px;  
+    margin-right: 10%;
+    height: 50%;
+}
+#main-div h1{
+    text-align: center;
+}
+
+td{
+    font-size: 12px;  
+}
+
+#top-div, #bottom-div{
+    display: flex;  
+}
+
+#top-left, #bottom-left{
+    width:55%;
+}
+#top-right, #bottom-right{
+    width:45%;
+}
+
+.form-result .result{
+    width: 40%;
+    margin-left: 60%;
+    text-align: right;
+    background: white;
+    height: 20px;
+    font-size: 12px;
+    margin-top: -10px;
+
+
+}
+
+fieldset{
+    border-color: rgb(250, 235, 215);
+}
+
+input[type=text]{
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+#top-right, #top-left, #bottom-right, #bottom-left{
+    background-color: rgb(241, 168, 57); 
+    margin: 10px  10px 0px 10px; 
+    display: inline-block;
+}
+
+#tright-fset, #tleft-fset{
+    height:110px;
+}
+#bright-fset, #bleft-fset{
+    height: 146px;
+}
+#customerid, #price{
+    width:100px;
+}
+#selection, #quantity{
+    width: 45px;
+}
+#retail{
+    margin-left: 100px;
+}
+#ups, #fedex{
+    margin-bottom: 25px;
+
+}
+
+#fedex{
+    margin-left: 60px;
+}
+#fedexair{
+    margin-left: 16px;
+}
+#quantity{
+    float: right;
+}
+label[for=quantity]{
+    margin-left: 55px;
+}
+#name, #partn, #descript{
+    width: 260px;
+}
+
+#price, #quantity {
+    text-align: right;
+}
+
+button{
+    background-color: rgb(241, 168, 57); 
+    width: 13%;
+    height: 25px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+button#exit{
+    float: right;
+    margin-right: 10px;
+}
+
+.landing{
+    width: 40%;
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+}
+/* Styling element with class name index page */
+.index-page{
+    width: 300px;
+    margin: 0 auto;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+/* Styling the h1 elements found in class name, index-page*/
+.index-page h1 {
+    text-align: center;
+    color: #4d4d4d;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+  }
+
+  /* Styling the submit and button type inputs found in element with class name, login-form */
+/* .login-form input[type="submit"], */
+.index-page input[type="button"]{
+  width: 100%;
+  padding:15px;
+  background-color: #535b63;
+  cursor: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 5px;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "mail-order",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Irenyak1/mail-order.git"
+  },
+  "author": "Irene Nyakate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Irenyak1/mail-order/issues"
+  },
+  "homepage": "https://github.com/Irenyak1/mail-order#readme"
+}

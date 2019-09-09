@@ -1,0 +1,150 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="mailOrder.css" />
+    <title>Mail-Order</title>
+  </head>
+
+  <body>
+   
+    <div class="caught-errors">
+        <p id="iderror"></p>
+        <p id="nameerror"></p>
+        <p id="codeerror"></p>
+        <br>
+        <br>       
+        <p id="partnerror"></p>
+        <p id="descripterror"></p>
+        <p id="priceerror"></p>
+    </div>
+  
+    <div id="main-div">
+        <h1>MAIL ORDER FORM</h1>
+      <!-- <form action="mailOrders" method="POST" id="order-form" onsubmit="return compute()"> -->
+      <form action="#" method="POST" id="order-form" onsubmit="return ValidData()">
+        <div id="top-div">
+          <div id="top-left">
+            <fieldset id="tleft-fset">
+              <legend>Customer Information</legend>
+              <table id="table1">
+                <tr>
+                  <td><label for="customerid">Customer ID:</label></td>
+                  <td><input type="text" id="customerid" name="customerid" placeholder="123-45-6789"/></td>
+                </tr>
+                <tr>
+                  <td><label for="name">Name: </label></td>
+                  <td><input type="text" id="name" name="name" placeholder="Tom Thumb"/></td>
+                </tr>
+                <tr>
+                  <td><label for="state">State: </label></td>
+                  <td>
+                    <input type="text" id="selection" name="selection" placeholder="CA"/>
+                    <!-- <select id="selection" name="selection">
+                        <option value="" id="code" name="select"></option>
+                        <option value="KLA" id="code" name="select">KLA</option>
+                        <option value="EBB" id="code" name="select">EBB</option>
+                        <option value="MBR" id="code" name="select">MBR</option>
+                        <option value="OTH" id="code" name="select">OTH</option>
+                    </select> -->
+                    <input type="checkbox" id="retail" name="retail" checked/>
+                    <label for="retail">Retail Customer</label>
+                  </td>
+                </tr>
+              </table>
+            </fieldset>
+          </div>
+          <div id="top-right">
+            <fieldset id="tright-fset">
+              <legend>Shipping</legend>
+              <table id="table2">
+                <tr>
+                  <td>
+                    <input type="radio" id="ups" name="radios" value="ups" checked/>
+                    <label for="ups">UPS</label>
+                    <input type="radio" id="fedex" name="radios" value="fedexg" />
+                    <label for="fedex">Fed Ex Ground</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="radio" id="postal" name="radios" value="uspostalair" />
+                    <label for="postal">US Postal Air</label>
+                    <input type="radio" id="fedexair" name="radios" value="fedexair" />
+                    <label for="fedexair">Fed Ex Air</label>
+                  </td>
+                </tr>
+              </table>
+            </fieldset>
+          </div>
+        </div>
+        <div id="bottom-div">
+          <div id="bottom-left">
+            <fieldset id="bleft-fset">
+              <legend>Part Ordered</legend>
+              <table id="table3">
+                <tr>
+                  <td><label for="partn">Part Number:</label></td>
+                  <td><input type="text" id="partn" name="partn" placeholder="10152"/></td>                 
+                </tr>
+                <tr>
+                  <td><label for="description">Description:</label></td>
+                  <td><input type="text" id="description" name="description" placeholder="Oil Filter"/></td>                 
+                </tr>
+                <tr>
+                    <td> <label for="price">Price per part:</label></td>
+                    <td><input type="text" id="price" name="price"  placeholder="$7.51"/>
+                    <label for="quantity">Quantity:</label>
+                    <input type="text" id="quantity" name="quantity" placeholder="2"/>
+                  </td>             
+                </tr>
+                <tr>
+                <td></td>
+                  <td><input type="checkbox" id="oversize" name="oversize"/>
+                  <label for="oversize">Oversize Container?</label>
+                  </td>
+                </tr>
+              </table>
+            </fieldset>
+          </div>
+          <div id="bottom-right">
+            <fieldset id="bright-fset">
+              <legend>Output</legend>
+              <div id="table4">
+                <div class="form-result">
+                  <label for="cost">Cost:</label>
+                  <div class="result" id="cost" name="cost" placeholder="$15.02"></div>
+                </div>
+                <div class="form-result">
+                  <label for="tax">Sales Tax:</label>
+                  <div class="result" id="tax" name="tax" placeholder="1.50"></div>
+                </div>
+                <div class="form-result">
+                    <label for="handling">Shipping and Handling:</label>
+                    <div class="result" id="handling" name="handling" placeholder="14.00"></div>
+                  </div>
+                <div class="form-result">
+                  <label for="total">Total:</label>
+                  <div class="result" id="total" name="total" placeholder="$30.52"></div>
+                  </div>
+                </table>
+            </fieldset>
+          </div>
+        </div>
+
+        <div>
+          <button id="compute" type="submit" name="compute">Compute</button>
+          <button type="button" class="neworder" id="newOrder" onclick="document.location.reload(true)">New Order</button>
+          <button type="button" id="exit" class="exit" onclick="Exit()">Exit</button>
+        </div>
+      </form>
+    </div>
+    <script src="mailOrder.js"></script>
+  </body>
+</html>
+
+
+
+
+

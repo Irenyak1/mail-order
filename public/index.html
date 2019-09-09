@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <title>Mail Order</title>
+  <!-- linking the external file containing the css -->
+  <link rel="stylesheet" type="text/css" href="mailOrder.css" />
+</head>
+
+<body>
+  <!-- Start of main div of the document -->
+  <div class="landing">
+    <!-- Start of form div -->
+    <div class="index-page">
+      <!-- Title of the form -->
+      <h1>Landing Page</h1>
+      <!-- Start of form for Landing page -->
+      <form action="auth" method="POST">
+        <input type="button" onclick="window.location.href='/mailOrder';" value="Make Order" />
+
+        OR
+
+        <input type="button" value="exit" onclick="Exit()" />
+      </form>
+      <!-- End of form div -->
+    </div>
+    <!-- End of parent div -->
+  </div>
+  <script>
+    function Exit (){
+        if (confirm("Are you sure you want to exit this page?")) {
+            document.write("");  
+        }    
+}
+  
+  </script>
+</body>
+
+</html>
