@@ -8,7 +8,7 @@
   </head>
 
   <body>
-   
+   <!-- Errors -->
     <div class="caught-errors">
         <p id="iderror"></p>
         <p id="nameerror"></p>
@@ -19,13 +19,13 @@
         <p id="descripterror"></p>
         <p id="priceerror"></p>
     </div>
-  
+  <!-- Errors end -->
     <div id="main-div">
         <h1>MAIL ORDER FORM</h1>
-      <!-- <form action="mailOrders" method="POST" id="order-form" onsubmit="return compute()"> -->
-      <form action="#" method="POST" id="order-form" onsubmit="return ValidData()">
+      <form action="mailOrders" method="POST" id="order-form" onsubmit="return ValidData()">
         <div id="top-div">
           <div id="top-left">
+            <!-- Field sets -->
             <fieldset id="tleft-fset">
               <legend>Customer Information</legend>
               <table id="table1">
@@ -41,13 +41,6 @@
                   <td><label for="state">State: </label></td>
                   <td>
                     <input type="text" id="selection" name="selection" placeholder="CA"/>
-                    <!-- <select id="selection" name="selection">
-                        <option value="" id="code" name="select"></option>
-                        <option value="KLA" id="code" name="select">KLA</option>
-                        <option value="EBB" id="code" name="select">EBB</option>
-                        <option value="MBR" id="code" name="select">MBR</option>
-                        <option value="OTH" id="code" name="select">OTH</option>
-                    </select> -->
                     <input type="checkbox" id="retail" name="retail" checked/>
                     <label for="retail">Retail Customer</label>
                   </td>
@@ -130,16 +123,19 @@
                   </div>
                 </table>
             </fieldset>
+            <!-- Fieldset end -->
           </div>
         </div>
-
+        <!-- Buttons -->
         <div>
           <button id="compute" type="submit" name="compute">Compute</button>
           <button type="button" class="neworder" id="newOrder" onclick="document.location.reload(true)">New Order</button>
           <button type="button" id="exit" class="exit" onclick="Exit()">Exit</button>
         </div>
+        <!-- Buttons end -->
       </form>
     </div>
+    <!-- linking the external javascript file -->
     <script src="mailOrder.js"></script>
   </body>
 </html>

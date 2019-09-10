@@ -16,12 +16,13 @@ const app = express();
 // Creating a  variable html_dir that stores the path to the folder with static files
 var html_dir = './public/';
 
-//set view engine
-app.set('view engine', 'ejs');
+//Set app to use morgan short 
 app.use(morgan("short"));
+
+//Set app to use the default of body parser
 app.use(parser.urlencoded({ extended: false }));
 
-//set public folder as static folder for static file
+//Set public folder as static folder for static file
 app.use(express.static("./public"));
 
 
@@ -72,8 +73,7 @@ app.post("/mailorders", (req, res) => {
 
   //Printing object to the console
   console.log(object)
-  console.log(object.cost)
-   
+     
   //Inserting data into the database 
   const querrystring = "INSERT INTO mailorder(custid,name,state,retail,radio,partn,descrip,price,quant,oversize,cost,tax,handle,total) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
   connection.query(querrystring,
@@ -94,10 +94,16 @@ app.post("/mailorders", (req, res) => {
       object.total
 
     ]);
+  // Function to set a time lag before the form closes after submit
+  setTimeout(function(){
   // Redirecting the user to the landing page after making an order
-  // res.redirect('/')
+  res.redirect('/')
   //Ending the session
   res.end();
+
+  // Setting time lag to 6000ms
+  },6000);
+  
 });
 
 // Port at which the app is running

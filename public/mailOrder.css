@@ -1,7 +1,9 @@
+/* Styling the body element */
 body{
     display: flex;
     
 }
+/* Styling the caught-errors class */
 .caught-errors{      
         font-size: 14px;
         font-weight: 100%;
@@ -9,10 +11,11 @@ body{
         width:40% ; 
         text-align: right;      
 }
+/* Styling the individual error messages using their ids */
 #iderror, #nameerror, #codeerror, #partnerror, #descripterror, #priceerror{
     color: red;
 }
-
+/* Styling the main div */
 #main-div{
     width: 70%;
     border: 2px solid rgb(250, 235, 215);
@@ -23,17 +26,22 @@ body{
     margin-right: 10%;
     height: 50%;
 }
+
+/* Styling the h1 element in the main div */
 #main-div h1{
     text-align: center;
 }
 
+/* Styling td */
 td{
     font-size: 12px;  
 }
 
+/* Styling elements using ids */
 #top-div, #bottom-div{
     display: flex;  
 }
+
 
 #top-left, #bottom-left{
     width:55%;
@@ -42,6 +50,7 @@ td{
     width:45%;
 }
 
+/* Styling class form-result and result */
 .form-result .result{
     width: 40%;
     margin-left: 60%;
@@ -54,16 +63,16 @@ td{
 
 
 }
-
+/* Style for fieldset */
 fieldset{
     border-color: rgb(250, 235, 215);
 }
-
+/* Styles for text inputs */
 input[type=text]{
     height: 20px;
     margin-bottom: 5px;
 }
-
+/* Styling elements by their ids */
 #top-right, #top-left, #bottom-right, #bottom-left{
     background-color: rgb(241, 168, 57); 
     margin: 10px  10px 0px 10px; 
@@ -99,9 +108,7 @@ input[type=text]{
 #quantity{
     float: right;
 }
-label[for=quantity]{
-    margin-left: 55px;
-}
+
 #name, #partn, #descript{
     width: 260px;
 }
@@ -109,7 +116,12 @@ label[for=quantity]{
 #price, #quantity {
     text-align: right;
 }
+/* Styles for label element */
+label[for=quantity]{
+    margin-left: 55px;
+}
 
+/* Styling buttons */
 button{
     background-color: rgb(241, 168, 57); 
     width: 13%;
@@ -119,12 +131,12 @@ button{
     margin-left: 10px;
     margin-top: 10px;
 }
-
+/* Styling button exit */
 button#exit{
     float: right;
     margin-right: 10px;
 }
-
+/* Styles for the landing page */
 .landing{
     width: 40%;
     margin: 20px auto; 
