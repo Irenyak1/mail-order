@@ -104,10 +104,156 @@ const ValidData = () => {
             
         }else {
             quantity.style.border = "1px solid red";
-            return  false
+            // return  false
         }
-   
+   orderCost(), SalesTaxCompute(), ShippingHandling(), Total();
 };
+
+var orderCost = ()=> {
+    var price = document.getElementById("price").value;
+    var quant = document.getElementById("quantity").value;
+    // myCost = document.getElementById("cost");
+
+       var cost = price * quant;
+       document.getElementById("cost").innerHTML = "$" + cost.toFixed(2);
+       return parseFloat(cost);
+
+}
+
+/*
+    Function to calculate sales taxes for retail customers
+    making orders from different towns, Kampala, Entebbe, Mbarara and any other.
+*/
+var SalesTaxCompute = ()=> {
+    
+    //Get town selected and if customer is a retailer
+    var state = document.getElementById("selection").value;
+    var retail = document.getElementById("retail").checked;
+    var salesTaxEl = document.getElementById("tax")
+    var cost = orderCost();
+
+    // Get sales tax for KLA (Kampala) retail customer
+    if (state.toUpperCase() === "KLA" && retail === true) {
+        var salesTax = ( cost * 10/100).toFixed(2);
+        salesTaxEl.innerHTML = "$ " + salesTax;
+        return salesTax;
+
+    }
+    // Get sales tax for EBB (Entebbe) retail customer
+    else if (state.toUpperCase() === "EBB" && retail === true) {
+        var salesTax = (cost * 5/100).toFixed(2);
+        salesTaxEl.innerHTML = "$ " + salesTax;
+        return salesTax;
+
+    }
+
+    // Get sales tax for MBR (Mbarara) retail customer
+    else if (state.toUpperCase() === "MBR" && retail === true) {
+        var salesTax = (cost * 5/100).toFixed(2);
+        salesTaxEl.innerHTML = "$ " + salesTax;
+        return salesTax;
+    }
+    
+
+    // Get sales tax for a wholesale customer or a retail customer from any other town 
+    else {
+        var salesTax = 0;
+        salesTaxEl.innerHTML = "$ " + salesTax.toFixed(2);
+        return salesTax;
+    
+    }
+
+
+}
+
+
+// Function to calculate shipping and handling charges
+var ShippingHandling = () => {
+    var ups = document.getElementById("ups").checked;
+    var fedexG = document.getElementById("fedex").checked;
+    var usPostal = document.getElementById("postal").checked;
+    var fedexAir = document.getElementById("fedexair").checked;
+    var quantity = document.getElementById("quantity").value;
+    var oversize = document.getElementById("oversize").checked;
+
+    
+    // Get shipping and handling cost when using Ups method with oversize
+    if (ups === true && oversize === true) {
+        costOne = (7 + 5) * quantity;
+        document.getElementById("handling").innerHTML = costOne.toFixed(2);
+        return costOne.toFixed(2);
+    }
+
+    // Get shipping and handling cost when using Ups method with no oversize
+    else if (ups === true && oversize === false) {
+        costTwo = 7 * quantity;
+        document.getElementById("handling").innerHTML = costTwo.toFixed(2);
+        return costTwo.toFixed(2);
+
+    }
+    // Get shipping and handling cost when using fedex ground method with oversize
+    else if (fedexG === true && oversize === true) {
+        costOne = (9.25 + 5) * quantity;
+        document.getElementById("handling").innerHTML= costOne.toFixed(2);
+        return costOne.toFixed(2);
+    }
+    // Get shipping and handling cost when using fedex ground method with no oversize
+    else if (fedexG === true && oversize === false) {
+        costTwo = 9.25 * quantity;
+        document.getElementById("handling").innerHTML = costTwo.toFixed(2);
+        return costTwo.toFixed(2);
+    }
+    //Get shipping and handling cost when using US Postal Air method with oversize
+    else if(usPostal=== true && oversize === true) {
+        costOne = (8.50 + 5) * quantity;
+        document.getElementById("handling").innerHTML = costOne.toFixed(2);
+        return costOne.toFixed(2);
+    }
+    //Get shipping and handling cost when using US Postal Air method with no oversize
+    else if (usPostal === true && oversize === false) {
+        costTwo = 8.50 * quantity;
+        document.getElementById("handling").innerHTML = costTwo.toFixed(2);
+        return costTwo.toFixed(2);
+    }
+    //Get shipping and handling cost when using Fedex Air method with oversize
+    else if (fedexAir === true && oversize === true) {
+        costOne = (12 + 5) * quantity;
+        document.getElementById("handling").innerHTML = costOne.toFixed(2);
+        return costOne.toFixed(2);
+    }
+    //Get shipping and handling cost when using Fedex Air method with no oversize
+    else if(fedexAir === true && oversize === false) {
+        costTwo = 12 * quantity;
+        document.getElementById("handling").innerHTML = costTwo.toFixed(2);
+        return costTwo.toFixed(2);
+    }  
+    
+    //Get shipping and handling cost when using the default selected method
+    else {
+        costTwo = 7 * quantity;
+        document.getElementById("handling").innerHTML = costTwo.toFixed(2);
+        return costTwo.toFixed(2);
+    }
+}
+
+// Total function takes up all the functions above as arguments,
+// adds them and returns the grand total cost of the mail order.
+
+// var Total = parseFloat(orderCost()+ SalesTaxCompute() + ShippingHandling()).toFixed(2)
+// document.getElementById("total").innerHTML = Total.toFixed(2);
+// return Total;
+
+function Total () {
+    orderCost();
+    SalesTaxCompute();
+    ShippingHandling();
+    grandTotal = (orderCost()+ SalesTaxCompute()+ ShippingHandling()).toFixed(2)
+    document.getElementById("my-total").innerHTML = grandTotal.toFixed(2);
+    return grandTotal.toFixed(2);
+
+}
+
+
 
 function Exit (){
         if (confirm("Are you sure you want to exit this page?")) {
